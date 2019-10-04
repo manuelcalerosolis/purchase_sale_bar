@@ -13,8 +13,6 @@ class PurchaseOrderLine(models.Model):
 
     bar_qty = fields.Float(string='Bar Quantity', digits=dp.get_precision('Product Unit of Measure'), required=True)
 
-    _logger.info("INSTANCIA DEL OBJETO***********************")
-
     no_change_bar_qty = False
 
     @api.onchange('bar_qty')

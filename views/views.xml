@@ -23,4 +23,26 @@
         </field>
     </record>
 
+    <record id="invoice_supplier_form_inherit" model="ir.ui.view">
+        <field name="name">invoice.supplier.form.inherit</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_line_ids']/tree//field[@name='quantity']" position="before">
+                <field name="bar_qty"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_order_form_inherit" model="ir.ui.view">
+        <field name="name">	sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/tree//field[@name='product_uom_qty']" position="before">
+                <field name="bar_qty"/>
+            </xpath>
+        </field>
+    </record>
+
 </odoo>

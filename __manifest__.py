@@ -32,6 +32,7 @@
     'category': 'Extra Tools',
     'depends': [
         'purchase',
+        'sale',
     ],
     'license': 'AGPL-3',
     'data': [

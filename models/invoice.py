@@ -40,3 +40,4 @@ class AccountInvoiceLine(models.Model):
             self.bar_qty = 0
         else:
             self.bar_qty = self.quantity / self.product_id.weight
+

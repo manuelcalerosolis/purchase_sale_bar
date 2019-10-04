@@ -2,6 +2,7 @@ from odoo import api, fields, models, _
 from odoo.addons import decimal_precision as dp
 
 import logging
+
 _logger = logging.getLogger(__name__)
 
 
@@ -15,7 +16,7 @@ class StockMove(models.Model):
     @api.onchange('bar_qty')
     def onchange_bar_qty(self):
 
-        _logger.info("*bar_qty*")
+        _logger.info("*stock.move.bar_qty*")
         _logger.info(self.bar_qty)
         _logger.info("*product_id.weight*")
         _logger.info(self.product_id.weight)

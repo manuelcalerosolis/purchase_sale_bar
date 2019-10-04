@@ -35,6 +35,9 @@ class StockMove(models.Model):
     @api.onchange('quantity_done')
     def onchange_quantity_done(self):
 
+        _logger.info("*****CAMBIO EN quantity_done****************")
+        _logger.info(self.change_bar_qty)
+
         self.change_bar_qty = False
 
         if self.quantity_done == 0 or self.product_id.weight == 0:
